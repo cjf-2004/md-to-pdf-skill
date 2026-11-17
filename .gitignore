@@ -1,0 +1,8 @@
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+preview/
+.DS_Store
+Thumbs.db
