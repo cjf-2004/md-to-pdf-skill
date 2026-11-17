@@ -50,7 +50,7 @@ $env:Path = "$env:LOCALAPPDATA\Pandoc;$env:LOCALAPPDATA\Programs\MiKTeX\miktex\b
 
 封面用 Pandoc raw LaTeX 块（围栏信息 `{=latex}`），不要用 Markdown `# 标题` 当封面。
 
-汉字紧贴数字或拉丁字母时（「作业4」「第3版」），xeCJK 会插空变成「作业 4」。只在标题那几个字上关 glue，**不要**全局关掉（否则「与 Lucas」会粘成「与Lucas」）：
+汉字紧贴数字或拉丁字母时（「第3版」），xeCJK 会插空变成「第 3 版」。只在标题那几个字上关 glue，**不要**全局关掉（否则「与 Taylor」会粘成「与Taylor」）：
 
 ```latex
 {\LARGE\heiti{\xeCJKsetup{CJKecglue={}}标题}}

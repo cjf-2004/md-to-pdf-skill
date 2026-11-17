@@ -2,7 +2,9 @@
 
 Claude Code 技能：用 **Markdown → Pandoc → XeLaTeX** 做出带真公式的中文 PDF。默认黑白、宋体/黑体、无页眉页脚。
 
-这不是 [simonhaenisch/md-to-pdf](https://github.com/simonhaenisch/md-to-pdf)（那是 Puppeteer 打 HTML）。本仓库走 TeX，适合作业、笔记、带 `$...$` 的中文稿。
+这不是 [simonhaenisch/md-to-pdf](https://github.com/simonhaenisch/md-to-pdf)（那是 Puppeteer 打 HTML）。本仓库走 TeX，适合笔记、讲义、带 `$...$` 的中文稿。
+
+成品样子见 [`examples/euler.pdf`](examples/euler.pdf)（欧拉公式的泰勒级数推导；源文件 [`examples/euler.md`](examples/euler.md)）。
 
 ## 为什么走这条路
 
@@ -48,6 +50,8 @@ pandoc doc.md -o doc.pdf --pdf-engine=xelatex -V CJKmainfont=SimSun -V CJKsansfo
 ```
 SKILL.md                 Claude 技能正文（怎么写 MD、怎么编译、怎么检查）
 assets/template.md       可直接复制的稿纸
+examples/euler.md        示例源稿（欧拉公式）
+examples/euler.pdf       示例成品
 references/pitfalls.md   YAML / xeCJK / 波浪号等坑
 ```
 

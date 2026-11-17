@@ -4,7 +4,7 @@
 
 ## 1. 不要用 ReportLab 画公式
 
-**错：** `Paragraph("grad F · V = - F_t")`、`u_bar^k`、`lambda`。中易宋体没有数学字形，帽子、希腊字母、上下标会变成方框或巨大空隙。
+**错：** `Paragraph("e^{i theta} = cos theta + i sin theta")` 这类硬画字符串。中易宋体没有数学字形，帽子、希腊字母、上下标会变成方框或巨大空隙。
 
 **对：** Markdown 写 `$...$` / `$$...$$`，Pandoc → XeLaTeX。
 
@@ -14,7 +14,7 @@
 
 **对：** 不要 `title:` / `author:`。用 `\pagestyle{empty}`，封面用 `{=latex}` 居中块。
 
-## 3. 汉字+数字被拆开（「作业4」→「作业 4」）
+## 3. 汉字+数字被拆开（「第3版」→「第 3 版」）
 
 xeCJK 在汉字和拉丁/数字之间插 `CJKecglue`。
 
@@ -22,10 +22,10 @@ xeCJK 在汉字和拉丁/数字之间插 `CJKecglue`。
 
 | 写法 | 结果 |
 | --- | --- |
-| Markdown 里直接写 `作业4` | 仍拆开 |
-| `\mbox{作业4}` | 仍可能拆开 |
-| 全局 `\xeCJKsetup{CJKecglue={}}` | 标题好了，正文「与 Lucas」粘成「与Lucas」 |
-| `作业~4` 或 `与~Lucas` | 印出看得见的波浪号 |
+| Markdown 里直接写 `第3版` | 仍拆开 |
+| `\mbox{第3版}` | 仍可能拆开 |
+| 全局 `\xeCJKsetup{CJKecglue={}}` | 标题好了，正文「与 Taylor」粘成「与Taylor」 |
+| `第~3版` 或 `与~Taylor` | 印出看得见的波浪号 |
 
 **对：** 只在标题那几个字上关 glue，正文保持默认：
 
@@ -43,7 +43,7 @@ xeCJK 在汉字和拉丁/数字之间插 `CJKecglue`。
 - \xeCJKsetup{CJKecglue={0.15em plus 0.05em minus 0.05em}}
 ```
 
-`{` 被当成 YAML 映射，内容会漏进标题（曾变成 `作业0.15em plus 0.05em minus 0.05em4`）。
+`{` 被当成 YAML 映射，内容会漏进标题（曾变成 `第0.15em plus 0.05em minus 0.05em3版`）。
 
 **对：** `header-includes` 不要写 `\xeCJKsetup`。glue 只写在 raw LaTeX 标题里。YAML 只保留模板里那些键。
 

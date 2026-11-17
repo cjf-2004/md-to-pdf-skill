@@ -20,7 +20,7 @@ header-includes:
 
 ```{=latex}
 \begin{center}
-{\LARGE\heiti{\xeCJKsetup{CJKecglue={}}标题}}\\[0.5em]
+{\LARGE\heiti{\xeCJKsetup{CJKecglue={}}第3版}}\\[0.5em]
 {\normalsize 副标题（可删）}
 \end{center}
 \vspace{0.3em}
@@ -28,17 +28,17 @@ header-includes:
 
 # 一、第一节
 
-正文宋体，首行缩进两字。行内公式如 $\nabla F\cdot V=-F_t$。
+正文宋体，首行缩进两字。行内公式如 $e^{i\theta}=\cos\theta+i\sin\theta$。
 
 独立公式：
 
 $$
-F(x,y,t)=F(x+\Delta x,\, y+\Delta y,\, t+\Delta t).
+e^{z}=\sum_{n=0}^{\infty}\frac{z^{n}}{n!}.
 $$
 
 # 二、第二节
 
-中文与英文专名之间留普通空格，例如 Horn–Schunck 算法与 Lucas–Kanade 算法。
+中文与英文专名之间留普通空格，例如 Taylor 级数与 Euler 公式。
 
 ## （1）小题
 
@@ -46,12 +46,11 @@ $$
 
 $$
 \begin{aligned}
-u^{k+1}
-&=\bar{u}^{k}
--\frac{F_x\bigl(F_x\bar{u}^{k}+F_y\bar{v}^{k}+F_t\bigr)}{\lambda^2+F_x^2+F_y^2},\\[0.4em]
-v^{k+1}
-&=\bar{v}^{k}
--\frac{F_y\bigl(F_x\bar{u}^{k}+F_y\bar{v}^{k}+F_t\bigr)}{\lambda^2+F_x^2+F_y^2}.
+e^{i\theta}
+&=1+i\theta-\frac{\theta^{2}}{2!}-i\frac{\theta^{3}}{3!}+\cdots,\\[0.4em]
+\cos\theta+i\sin\theta
+&=1-\frac{\theta^{2}}{2!}+\frac{\theta^{4}}{4!}+\cdots
++i\Bigl(\theta-\frac{\theta^{3}}{3!}+\cdots\Bigr).
 \end{aligned}
 $$
 
@@ -60,5 +59,5 @@ $$
 矩阵：
 
 $$
-v=(A^\top A)^{-1}A^\top b.
+R(\theta)=\begin{pmatrix}\cos\theta&-\sin\theta\\ \sin\theta&\cos\theta\end{pmatrix}.
 $$
