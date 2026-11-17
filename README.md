@@ -4,7 +4,13 @@ Claude Code 技能：用 **Markdown → Pandoc → XeLaTeX** 做出带真公式�
 
 这不是 [simonhaenisch/md-to-pdf](https://github.com/simonhaenisch/md-to-pdf)（那是 Puppeteer 打 HTML）。本仓库走 TeX，适合笔记、讲义、带 `$...$` 的中文稿。
 
-成品样子见 [`examples/euler.pdf`](examples/euler.pdf)（欧拉公式的泰勒级数推导；源文件 [`examples/euler.md`](examples/euler.md)）。
+<p align="center">
+  <a href="examples/euler.pdf">
+    <img src="examples/euler.png" alt="欧拉公式的推导（示例 PDF 第 1 页）" width="680">
+  </a>
+  <br>
+  <sub>示例：<a href="examples/euler.md">euler.md</a> → <a href="examples/euler.pdf">euler.pdf</a>（欧拉公式的泰勒级数推导）</sub>
+</p>
 
 ## 为什么走这条路
 
@@ -52,6 +58,7 @@ SKILL.md                 Claude 技能正文（怎么写 MD、怎么编译、怎
 assets/template.md       可直接复制的稿纸
 examples/euler.md        示例源稿（欧拉公式）
 examples/euler.pdf       示例成品
+examples/euler.png       示例首页，README 预览用
 references/pitfalls.md   YAML / xeCJK / 波浪号等坑
 ```
 
